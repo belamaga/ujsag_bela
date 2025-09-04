@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cikkek</title>
+        <link rel="stylesheet" href="/css/subscribers.css">
+    </head>
+    <body>
+        <div id="articles-kontener">
+            <%- include('nav.ejs') %>
+            <h1>Cikkek</h1>
+            <ul>
+                <% for( let i = 0; i < articles.length; i++ ) { %>
+                    <li>Cikk neve: <%= articles[i].nev %></li>
+                    <li style="margin-left: 15px;">Leírás: <%= articles[i].description %></li>
+                <% } %>
+            </ul>
+        </div>
+    </body>
+</html>
